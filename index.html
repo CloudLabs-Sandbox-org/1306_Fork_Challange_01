@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple JavaScript Calculator</title>
+    <style>
+      body {
+        background: #f4f4f4;
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      .calculator {
+        background: #fff;
+        padding: 2rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+        width: 320px;
+      }
+      .display {
+        width: 100%;
+        height: 48px;
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        text-align: right;
+        padding: 0.5rem;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        background: #f9f9f9;
+      }
+      .buttons {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0.5rem;
+      }
+      .buttons button {
+        padding: 1rem;
+        font-size: 1.2rem;
+        border: none;
+        border-radius: 6px;
+        background: #e0e0e0;
+        cursor: pointer;
+        transition: background 0.2s;
+      }
+      .buttons button.operator {
+        background: #ffd966;
+      }
+      .buttons button.equal {
+        background: #6fa8dc;
+        color: #fff;
+        grid-column: span 2;
+      }
+      .buttons button.clear {
+        background: #e06666;
+        color: #fff;
+      }
+      .buttons button:active {
+        background: #b4b4b4;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="calculator">
+      <input type="text" class="display" id="display" disabled />
+      <div class="buttons">
+        <button onclick="appendNumber('7')">7</button>
+        <button onclick="appendNumber('8')">8</button>
+        <button onclick="appendNumber('9')">9</button>
+        <button class="operator" onclick="appendOperator('/')">÷</button>
+        <button onclick="appendNumber('4')">4</button>
+        <button onclick="appendNumber('5')">5</button>
+        <button onclick="appendNumber('6')">6</button>
+        <button class="operator" onclick="appendOperator('*')">×</button>
+        <button onclick="appendNumber('1')">1</button>
+        <button onclick="appendNumber('2')">2</button>
+        <button onclick="appendNumber('3')">3</button>
+        <button class="operator" onclick="appendOperator('-')">−</button>
+        <button onclick="appendNumber('0')">0</button>
+        <button onclick="appendDot()">.</button>
+        <button class="equal" onclick="calculateResult()">=</button>
+        <button class="operator" onclick="appendOperator('+')">+</button>
+        <button class="clear" onclick="clearDisplay()">C</button>
+      </div>
+    </div>
+    <script src="calculator.js"></script>
+  </body>
+</html>
