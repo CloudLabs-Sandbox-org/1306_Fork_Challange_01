@@ -1,0 +1,14 @@
+{
+  "name": "openweathermap-app",
+  "version": "1.0.0",
+  "description": "A simple application to retrieve weather data from the OpenWeatherMap API.",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "live-server public"
+  },
+  "dependencies": {
+    "axios": "^0.21.1"
+  },
+  "author": "Your Name",
+  "license": "MIT"
+}
